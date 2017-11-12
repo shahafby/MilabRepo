@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmantMainButtons"
+    android:id="@+id/fragment_main_buttons">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose your house"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Stark house"
+        android:id="@+id/starkHouse_button"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Lanister house"
+        android:id="@+id/lanisterHouse_button"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="25dp" />
+
+</FrameLayout>
