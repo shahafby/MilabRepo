@@ -5,8 +5,6 @@
     tools:context="layout.MainFragment"
     android:id="@+id/fragment_main">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,19 +15,19 @@
         android:layout_marginTop="30dp"
         android:gravity="center" />
 
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_picker"
+        android:layout_gravity="center" />
+
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lunch"
+        android:text="New Button"
         android:id="@+id/lunch_button"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="80dp" />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/numberPicker"
-        android:layout_gravity="center" />
 
 </FrameLayout>
