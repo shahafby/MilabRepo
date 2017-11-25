@@ -10,15 +10,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/search_param"
-        android:layout_gravity="center"
-        android:hint="Type your search" />
+        android:layout_gravity="center_horizontal|top"
+        android:hint="Type your search"
+        android:layout_marginTop="100dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="GO"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="180dp" />
+        android:id="@+id/go_button"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_textView"
+        android:layout_gravity="center" />
 </FrameLayout>
