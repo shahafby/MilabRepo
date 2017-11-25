@@ -5,9 +5,20 @@
     tools:context="milab.googlesearch.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_param"
+        android:layout_gravity="center"
+        android:hint="Type your search" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="180dp" />
 </FrameLayout>
