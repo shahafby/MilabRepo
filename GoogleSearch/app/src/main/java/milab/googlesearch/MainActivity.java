@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String host = "http://www.google.co.il";
+    final String host = "https://www.googleapis.com/customsearch/v1?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         String key = "AIzaSyA1c9ZyIIM7EnHQ-Qloo1kdQB6w7N9On9g";
         String cxVal = "001358638682705194926:exppffh1hca";
         String url =
-                "https://www.googleapis.com/customsearch/v1?" +
+                host +
                         "key=" + key +
                         "&cx=" + cxVal +
                         "&q=" + param;
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
 
                     data = new JSONObject(response).getJSONObject("searchInformation").get("formattedSearchTime");
+                    Log.d("","");
 
                 } catch (Throwable t) {
                     Log.e("err", "Could not parse malformed JSON: \"" + response + "\"");
