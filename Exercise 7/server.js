@@ -8,13 +8,15 @@ app.get('/getTime', (req, res) => {
 });
 
 app.get('/getFile/:filename',(req, res) => {
-    let filename = req.params.filename || "<test.txt>";
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    let filename = req.params.filename || "test.txt";
     fs.readFile(filename,(err, content) => {
         if (err) {
             console.error(err);
             return;
         }
-        res.send(content);
+        res.write(content);
+        res.end();
     });
 });
 app.listen(3000, () => {
