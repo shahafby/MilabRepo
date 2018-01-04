@@ -1,25 +1,15 @@
 const PORT = process.env.PORT || 5000
 const express = require('express');
 const fs = require('fs');
+const bodyParser = require('body-parser');
 
 let app = express();
 
-app.get('/getTime', (req, res) => {
-    res.send(new Date);
-});
+app.use(bodyParser.json());
+
 
 app.get('/getFile/:filename',(req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/html'});
     let filename = req.params.filename || "test.txt";
-    // fs.readFile(filename,(err, content) => {
-    //     if (err) {
-    //         console.error(err);
-    //         return;
-    //     }
-    //     res.write(content);
-    //     res.end();
-    // });
-    // let fileToRead = req.params.filename || "showMyName.txt";
     const src = fs.createReadStream(filename);
     src.on('error', handler);
     src.pipe(res);
